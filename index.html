@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CareerLIFT | AI-Powered Workplace Integration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2563eb",
+              secondary: "#f59e0b",
+              dark: "#1e293b",
+              light: "#f8fafc",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .fade-in.appear {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .card-hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+      .ai-pattern {
+        background: radial-gradient(
+          circle,
+          rgba(37, 99, 235, 0.05) 0%,
+          rgba(255, 255, 255, 0) 70%
+        );
+      }
+      .link-style {
+        cursor: pointer;
+        color: #2563eb;
+        text-decoration: underline;
+      }
+      .link-style:hover {
+        color: #1d4ed8;
+      }
+      .icon-image {
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
+        border-radius: 12px;
+      }
+      .resource-image {
+        width: 100%;
+        height: 192px;
+        object-fit: cover;
+        border-radius: 12px 12px 0 0;
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-white text-dark">
+    <!-- Navigation -->
+    <nav
+      class="fixed w-full bg-white bg-opacity-90 backdrop-blur-sm z-50 shadow-sm"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+          <div class="flex items-center">
+            <div class="text-2xl font-bold text-primary">
+              Career<span class="text-secondary">LIFT</span>
+            </div>
+          </div>
+          <div class="hidden md:flex space-x-8">
+            <button
+              onclick="scrollToSection('features')"
+              class="text-gray-600 hover:text-primary transition-colors"
+            >
+              Features
+            </button>
+            <button
+              onclick="scrollToSection('how-it-works')"
+              class="text-gray-600 hover:text-primary transition-colors"
+            >
+              How It Works
+            </button>
+            <button
+              onclick="scrollToSection('employers')"
+              class="text-gray-600 hover:text-primary transition-colors"
+            >
+              For Employers
+            </button>
+            <button
+              onclick="scrollToSection('resources')"
+              class="text-gray-600 hover:text-primary transition-colors"
+            >
+              Resources
+            </button>
+          </div>
+          <div>
+            <button
+              onclick="scrollToSection('contact')"
+              class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Contact Us
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-28 pb-20 px-4 sm:px-6 lg:px-8 ai-pattern">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div class="fade-in">
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+            AI-Powered Success for <span class="text-primary">New Hires</span>
+          </h1>
+          <p class="text-lg text-gray-600 mb-8 max-w-lg">
+            Personalized guidance, skill development, and workplace integration
+            powered by collaborative AI agents. Start your career journey with
+            confidence.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button
+              onclick="scrollToSection('features')"
+              class="bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+            >
+              Get Started
+            </button>
+            <button
+              onclick="scrollToSection('how-it-works')"
+              class="border-2 border-primary text-primary px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors"
+            >
+              How It Works
+            </button>
+            <button
+              onclick="scrollToSection('features')"
+              class="bg-secondary text-white px-6 py-3 rounded-lg font-medium hover:bg-amber-600 transition-colors"
+            >
+              For New Hires
+            </button>
+          </div>
+        </div>
+        <div class="fade-in flex justify-center">
+          <div class="relative">
+            <div
+              class="absolute -inset-4 bg-blue-100 rounded-full opacity-50 blur-lg"
+            ></div>
+            <div
+              class="relative bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-xl border border-gray-100"
+            >
+              <div class="grid grid-cols-2 gap-4">
+                <div
+                  class="bg-white p-4 rounded-lg shadow-sm border border-gray-100"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=400&fit=crop&crop=center&auto=format&q=80"
+                    alt="Onboarding Agent"
+                    class="icon-image mx-auto mb-3"
+                  />
+                  <h3 class="font-semibold text-center">Onboarding Agent</h3>
+                </div>
+                <div
+                  class="bg-white p-4 rounded-lg shadow-sm border border-gray-100"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=center&auto=format&q=80"
+                    alt="Skills Coach"
+                    class="icon-image mx-auto mb-3"
+                  />
+                  <h3 class="font-semibold text-center">Skills Coach</h3>
+                </div>
+                <div
+                  class="bg-white p-4 rounded-lg shadow-sm border border-gray-100"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=400&fit=crop&crop=center&auto=format&q=80"
+                    alt="Culture Guide"
+                    class="icon-image mx-auto mb-3"
+                  />
+                  <h3 class="font-semibold text-center">Culture Guide</h3>
+                </div>
+                <div
+                  class="bg-white p-4 rounded-lg shadow-sm border border-gray-100"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=400&h=400&fit=crop&crop=center&auto=format&q=80"
+                    alt="Mentor Match"
+                    class="icon-image mx-auto mb-3"
+                  />
+                  <h3 class="font-semibold text-center">Mentor Match</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-20 bg-light ai-pattern">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-3xl font-bold mb-4">How Our AI Team Supports You</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Collaborative AI agents work together to provide comprehensive
+            support throughout your career journey
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="fade-in card-hover bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4"
+            >
+              <span class="text-primary font-bold">1</span>
+            </div>
+            <h3 class="font-bold text-xl mb-3">Onboarding Assistance</h3>
+            <p class="text-gray-600 mb-4">
+              Step-by-step guidance through company processes, paperwork, and
+              first-week essentials.
+            </p>
+            <button
+              onclick="scrollToSection('features')"
+              class="text-primary font-medium flex items-center mt-2"
+            >
+              Learn more
+              <svg
+                class="w-4 h-4 ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <div
+            class="fade-in card-hover bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center mb-4"
+            >
+              <span class="text-secondary font-bold">2</span>
+            </div>
+            <h3 class="font-bold text-xl mb-3">Skill Building</h3>
+            <p class="text-gray-600 mb-4">
+              Personalized learning paths to develop job-specific and soft
+              skills based on your role.
+            </p>
+            <button
+              onclick="scrollToSection('features')"
+              class="text-primary font-medium flex items-center mt-2"
+            >
+              Learn more
+              <svg
+                class="w-4 h-4 ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <div
+            class="fade-in card-hover bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-4"
+            >
+              <span class="text-green-600 font-bold">3</span>
+            </div>
+            <h3 class="font-bold text-xl mb-3">Workplace Integration</h3>
+            <p class="text-gray-600 mb-4">
+              Adapt to company culture, communication styles, and build
+              meaningful relationships.
+            </p>
+            <button
+              onclick="scrollToSection('features')"
+              class="text-primary font-medium flex items-center mt-2"
+            >
+              Learn more
+              <svg
+                class="w-4 h-4 ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <div
+            class="fade-in card-hover bg-white p-6 rounded-xl shadow-sm border border-gray-100"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mb-4"
+            >
+              <span class="text-purple-600 font-bold">4</span>
+            </div>
+            <h3 class="font-bold text-xl mb-3">Ongoing Support</h3>
+            <p class="text-gray-600 mb-4">
+              Continuous feedback, performance insights, and career development
+              planning.
+            </p>
+            <button
+              onclick="scrollToSection('features')"
+              class="text-primary font-medium flex items-center mt-2"
+            >
+              Learn more
+              <svg
+                class="w-4 h-4 ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Details -->
+    <section id="features" class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-3xl font-bold mb-4">Comprehensive Career Support</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Tailored solutions for every stage of your professional journey
+          </p>
+        </div>
+
+        <div class="flex justify-start items-center mb-20">
+          <div class="fade-in">
+            <div class="text-primary font-bold mb-2">Onboarding Assistance</div>
+            <h3 class="text-2xl font-bold mb-4">Seamless First Days</h3>
+            <p class="text-gray-600 mb-6">
+              Our AI onboarding specialist guides you through every step:
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <svg
+                  class="h-5 w-5 text-green-500 mt-0.5 mr-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span
+                  >Tailored AI-driven onboarding that adapts to each hire's
+                  role, background, and learning style.</span
+                >
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="h-5 w-5 text-green-500 mt-0.5 mr-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span
+                  >Role-specific mentorship bots guide employees step-by-step
+                  through essential tools and practical job scenarios.</span
+                >
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="h-5 w-5 text-green-500 mt-0.5 mr-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span
+                  >Data-powered improvements using insights from past onboarding
+                  experiences to proactively address unique challenges for every
+                  new hire.</span
+                >
+              </li>
+            </ul>
+            <button
+              onclick="scrollToSection('contact')"
+              class="mt-6 bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+            >
+              Start Onboarding
+            </button>
+          </div>
+        </div>
+
+        <div class="flex justify-start items-center mb-20">
+          <div class="fade-in order-1 md:order-2">
+            <div class="text-secondary font-bold mb-2">Skill Building</div>
+            <h3 class="text-2xl font-bold mb-4">Personalized Growth Paths</h3>
+            <p class="text-gray-600 mb-6">
+              Our AI skills coach creates custom development plans:
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <svg
+                  class="h-5 w-5 text-green-500 mt-0.5 mr-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span
+                  >AI wellness check-ins that monitor new hires' mental state
+                  and recommend helpful resources.</span
+                >
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="h-5 w-5 text-green-500 mt-0.5 mr-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span
+                  >Access to mental wellness programs, ensuring psychological
+                  safety and smoother adaptation to workplace culture.</span
+                >
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="h-5 w-5 text-green-500 mt-0.5 mr-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span
+                  >Peer support networks that connect fresh hires with one
+                  another for encouragement and shared learning.</span
+                >
+              </li>
+            </ul>
+            <button
+              onclick="scrollToSection('contact')"
+              class="mt-6 bg-secondary text-white px-6 py-3 rounded-lg font-medium hover:bg-amber-600 transition-colors"
+            >
+              Explore Learning
+            </button>
+          </div>
+        </div>
+
+        <div class="flex justify-start items-center mb-20">
+          <div class="fade-in">
+            <div class="text-green-600 font-bold mb-2">
+              Workplace Integration
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Thrive in Your Environment</h3>
+            <p class="text-gray-600 mb-6">
+              Our culture guide helps you navigate workplace dynamics:
+            </p>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <svg
+                  class="h-5 w-5 text-green-500 mt-0.5 mr-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span
+                  >Early career progression planning woven directly into the
+                  onboarding journey.</span
+                >
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="h-5 w-5 text-green-500 mt-0.5 mr-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span
+                  >Mentorship pairings that support professional growth from day
+                  one.</span
+                >
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="h-5 w-5 text-green-500 mt-0.5 mr-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span
+                  >Internal mobility pathways highlighted to show clear
+                  opportunities for advancement within the company.</span
+                >
+              </li>
+            </ul>
+            <button
+              onclick="scrollToSection('contact')"
+              class="mt-6 bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors"
+            >
+              Start Integration
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- For Employers -->
+    <section id="employers" class="py-20 bg-light ai-pattern">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-3xl font-bold mb-4">For Employers & HR Teams</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Transform your onboarding process and boost new hire success rates
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+          <div class="fade-in">
+            <h3 class="text-xl font-bold mb-4">Why Choose CareerLIFT?</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <svg
+                  class="h-5 w-10 text-green-500 mt-0.5 mr-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>
+                  <strong>44% of New Hires</strong>
+                  regret their decision about their new role within the first
+                  week, with 23% admitting to crying during their first week.
+                </span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="h-5 w-10 text-green-500 mt-0.5 mr-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>
+                  <strong>60% of employees</strong>
+                  report that mental health problems directly impact their job
+                  satisfation and performance.
+                </span>
+              </li>
+              <li class="flex items-start">
+                <svg
+                  class="h-5 w-10 text-green-500 mt-0.5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>
+                  <strong>83% of High-Performing Companies</strong>
+                  start the onboarding process before the new hire's first day.
+                </span>
+              </li>
+            </ul>
+
+            <button
+              onclick="scrollToSection('contact')"
+              class="mt-8 bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+            >
+              Schedule Demo
+            </button>
+          </div>
+
+          <div class="fade-in">
+            <div
+              class="bg-white p-8 rounded-xl shadow-sm border border-gray-100"
+            >
+              <h3 class="text-xl font-bold mb-4">Implementation Timeline</h3>
+              <div class="space-y-4">
+                <div class="flex items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-4"
+                  >
+                    <span class="text-primary font-bold text-sm">1</span>
+                  </div>
+                  <div>
+                    <div class="font-medium">Week 1-2</div>
+                    <div class="text-sm text-gray-600">
+                      Platform setup and integration
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center mr-4"
+                  >
+                    <span class="text-secondary font-bold text-sm">2</span>
+                  </div>
+                  <div>
+                    <div class="font-medium">Week 3-4</div>
+                    <div class="text-sm text-gray-600">
+                      AI training and customization
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-4"
+                  >
+                    <span class="text-green-600 font-bold text-sm">3</span>
+                  </div>
+                  <div>
+                    <div class="font-medium">Week 5-6</div>
+                    <div class="text-sm text-gray-600">
+                      Pilot program with first cohort
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <div
+                    class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center mr-4"
+                  >
+                    <span class="text-purple-600 font-bold text-sm">4</span>
+                  </div>
+                  <div>
+                    <div class="font-medium">Week 7+</div>
+                    <div class="text-sm text-gray-600">Full rollout</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources/Blog -->
+    <section id="resources" class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 fade-in">
+          <h2 class="text-3xl font-bold mb-4">Career Resources & Insights</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Expert advice for new professionals and those supporting them
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="fade-in card-hover bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=400&fit=crop&crop=center&auto=format&q=80"
+              alt="5 Strategies for Your First 90 Days"
+              class="resource-image"
+            />
+            <div class="p-6">
+              <h3 class="font-bold text-xl mb-2">
+                5 Strategies for Your First 90 Days
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Maximize your onboarding experience with these proven techniques
+                for workplace success.
+              </p>
+              <button
+                class="showResource('resource1')"
+                class="text-primary font-medium flex items-center"
+              >
+                Read more
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="fade-in card-hover bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=400&fit=crop&crop=center&auto=format&q=80"
+              alt="Mastering Workplace Communication"
+              class="resource-image"
+            />
+            <div class="p-6">
+              <h3 class="font-bold text-xl mb-2">
+                Mastering Workplace Communication
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Learn how to navigate different communication styles and build
+                strong professional relationships.
+              </p>
+              <button
+                class="showResource('resource2')"
+                class="text-primary font-medium flex items-center"
+              >
+                Read more
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="fade-in card-hover bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=400&fit=crop&crop=center&auto=format&q=80"
+              alt="AI-Powered Career Development"
+              class="resource-image"
+            />
+            <div class="p-6">
+              <h3 class="font-bold text-xl mb-2">
+                AI-Powered Career Development
+              </h3>
+              <p class="text-gray-600 mb-4">
+                How personalized AI coaching can accelerate your professional
+                growth and skill acquisition.
+              </p>
+              <button
+                class="showResource('resource3')"
+                class="text-primary font-medium flex items-center"
+              >
+                Read more
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-light ai-pattern">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 fade-in">
+          <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+          <p class="text-gray-600">
+            Have questions? Our AI team is ready to assist both individuals and
+            organizations
+          </p>
+        </div>
+
+        <form class="bg-white rounded-2xl shadow-lg p-8 fade-in">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="md:col-span-2">
+              <label class="name" class="block text-gray-700 mb-2"
+                >Full Name</label
+              >
+              <input
+                type="text"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="Your name"
+              />
+            </div>
+
+            <div>
+              <label class="email" class="block text-gray-700 mb-2"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="you@example.com"
+              />
+            </div>
+
+            <div>
+              <label class="role" class="block text-gray-700 mb-2"
+                >I am a...</label
+              >
+              <select
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+              >
+                <option>New Hire</option>
+                <option>Employer/HR Professional</option>
+                <option>Career Coach</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="message" class="block text-gray-700 mb-2"
+                >Message</label
+              >
+              <textarea
+                rows="5"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                placeholder="How can we help you?"
+              ></textarea>
+            </div>
+
+            <div class="md:col-span-2 text-center">
+              <button
+                type="submit"
+                class="bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-700 transition-colors"
+              >
+                Send Message
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-dark text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <div class="text-2xl font-bold text-white mb-4">
+              Career<span class="text-secondary">LIFT</span>
+            </div>
+            <p class="text-gray-400">
+              Empowering new professionals with AI-driven workplace integration
+              and development.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Navigation</h3>
+            <ul class="space-y-2">
+              <li>
+                <button
+                  onclick="scrollToSection('features')"
+                  class="text-gray-400 hover:text-white transition-colors"
+                >
+                  Features
+                </button>
+              </li>
+              <li>
+                <button
+                  onclick="scrollToSection('how-it-works')"
+                  class="text-gray-400 hover:text-white transition-colors"
+                >
+                  How It Works
+                </button>
+              </li>
+              <li>
+                <button
+                  onclick="scrollToSection('employers')"
+                  class="text-gray-400 hover:text-white transition-colors"
+                >
+                  For Employers
+                </button>
+              </li>
+              <li>
+                <button
+                  onclick="scrollToSection('resources')"
+                  class="text-gray-400 hover:text-white transition-colors"
+                >
+                  Resources
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Legal</h3>
+            <ul class="space-y-2">
+              <li>
+                <button
+                  class="text-gray-400 hover:text-white transition-colors"
+                >
+                  Privacy Policy
+                </button>
+              </li>
+              <li>
+                <button
+                  class="text-gray-400 hover:text-white transition-colors"
+                >
+                  Terms of Service
+                </button>
+              </li>
+              <li>
+                <button
+                  class="text-gray-400 hover:text-white transition-colors"
+                >
+                  Security
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Connect</h3>
+            <div class="flex space-x-4">
+              <button class="text-gray-400 hover:text-white transition-colors">
+                <span class="sr-only">Twitter</span>
+                <svg
+                  class="h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                  />
+                </svg>
+              </button>
+              <button class="text-gray-400 hover:text-white transition-colors">
+                <span class="sr-only">LinkedIn</span>
+                <svg
+                  class="h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400"
+        >
+          <p>&copy; 2025 CareerLIFT. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Scroll to section function
+      function scrollToSection(sectionId) {
+        document
+          .getElementById(sectionId)
+          .scrollIntoView({ behavior: "smooth" });
+      }
+
+      // Fade-in animation observer
+      const fadeElements = document.querySelectorAll(".fade-in");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("appear");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      fadeElements.forEach((element) => {
+        observer.observe(element);
+      });
+
+      // Resource modal placeholder
+      function showResource(resourceId) {
+        alert("Resource content would appear here in a modal window");
+      }
+    </script>
+  </body>
+</html>
